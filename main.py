@@ -30,7 +30,7 @@ class MainWindow(QMainWindow):
         self.init_ui()
     
     def init_ui(self):
-        self.setWindowTitle("Safe Browsing Checker")
+        self.setWindowTitle("Audit Website")
         self.setMinimumSize(700, 600)
 
         if getattr(sys, 'frozen', False):

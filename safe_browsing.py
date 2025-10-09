@@ -1,5 +1,3 @@
-# safe_browsing.py (tambahan)
-
 import requests
 import json
 import socket
@@ -24,7 +22,7 @@ class SafeBrowsingChecker:
         
         payload = {
             "client": {
-                "clientId": "radipta-safebrowsing",
+                "clientId": "rbw-safebrowsing",
                 "clientVersion": "1.0.0"
             },
             "threatInfo": {
