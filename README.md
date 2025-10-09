@@ -1,4 +1,4 @@
-# RBW Safe Browser Checker
+# RBW Safe Browsing Checker
 
 Aplikasi desktop untuk mengecek keamanan website menggunakan Google Safe Browsing API.
 
