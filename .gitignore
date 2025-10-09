@@ -38,8 +38,8 @@ wheels/
 .DS_Store
 Thumbs.db
 
-# Config (jika ada API key sensitive)
+# Config
 config.py
 
-# Icon files (opsional)
+# Icon
 *.ico
