@@ -1,6 +1,49 @@
 import streamlit as st
-from config import API_KEY, EDUCATION_SITES, ECOMMERCE_SITES, DANGEROUS_SITES
 from safe_browsing import SafeBrowsingChecker
+
+# Get API Key from Streamlit Secrets
+try:
+    API_KEY = st.secrets["API_KEY"]
+except:
+    st.error("⚠️ API_KEY tidak ditemukan di Secrets! Set di: Manage app > Settings > Secrets")
+    st.stop()
+
+# Website Lists
+EDUCATION_SITES = [
+    "https://www.coursera.org",
+    "https://www.udemy.com",
+    "https://www.khanacademy.org",
+    "https://www.edx.org",
+    "https://www.skillshare.com",
+    "https://www.udacity.com",
+    "https://www.duolingo.com",
+    "https://www.codecademy.com",
+    "https://www.brilliant.org",
+    "https://www.futurelearn.com"
+]
+
+ECOMMERCE_SITES = [
+    "https://www.amazon.com",
+    "https://www.ebay.com",
+    "https://www.tokopedia.com",
+    "https://www.shopee.co.id",
+    "https://www.bukalapak.com",
+    "https://www.lazada.co.id",
+    "https://www.alibaba.com",
+    "https://www.blibli.com",
+    "https://www.zalora.co.id",
+    "https://www.aliexpress.com/"
+]
+
+DANGEROUS_SITES = [
+    "http://testsafebrowsing.appspot.com/s/malware.html",
+    "http://testsafebrowsing.appspot.com/s/phishing.html",
+    "http://testsafebrowsing.appspot.com/s/unwanted.html",
+    "http://testsafebrowsing.appspot.com/apiv4/ANY_PLATFORM/MALWARE/URL/",
+    "http://testsafebrowsing.appspot.com/apiv4/ANY_PLATFORM/SOCIAL_ENGINEERING/URL/",
+    "http://testsafebrowsing.appspot.com/apiv4/ANY_PLATFORM/UNWANTED_SOFTWARE/URL/",
+    "http://testsafebrowsing.appspot.com/apiv4/WINDOWS/POTENTIALLY_HARMFUL_APPLICATION/URL/"
+]
 
 # Page config
 st.set_page_config(
